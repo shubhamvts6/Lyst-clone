@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #box1{
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+        #container1{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,1fr);
+            margin-top: 5%;
+        }
+        #container2{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            margin-top: 7%;
+        }
+        #photo{
+            width: 100%;
+            height: 200px;
+        }
+        
+        #div1{
+            border: 1px solid black;
+        }
+        #photo1{
+            width: 75%;
+            height: 83%;
+            margin-left: 25%;
+        }
+        #container3{
+            display: flex;
+            margin-top: 8%;
+            width: 100%;
+            background-color: rgb(245,244,242);
+            /* border: 1px solid black; */
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            
+        }
+        #box2{
+            margin-left: 10%;
+            margin-bottom: 7%;
+            display: flex;
+            width: 80%;
+            background-color: rgb(245,244,242);
+        }
+        #box3{
+            border-left: 1px solid black;
+            width: 35%;
+            background-color: rgb(202,252,79);
+        
+        }
+        #box12{
+          
+            margin-left: 4%;
+            /* border: 1px solid black; */
+        }
+        #container4{
+            margin-top: 3%;
+            display: flex;
+           justify-content: space-around;
+        }
+        #left1{
+           
+            /* border : 2px solid black; */
+            margin-bottom: 3%;
+            width: 5%;
+            writing-mode: vertical-rl;
+            
+  transform: rotate(180deg);
+        }
+    
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<link rel="stylesheet" href="/style/footer.css">
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+     <div id="box1" >
+        <img width="100%" src="https://cdna.lystit.com/cms/ENG_header_XL_9f9e2af236_615828663f.jpg" alt="">
+    </div>
+
+    <div id="container1" >
+
+    </div>
+
+    <div id="container2" >
+        <div style="border: 1px solid black; background-color: antiquewhite;">
+            <h1>BREAKOUT BRANDS</h1>
+        </div>
+
+        
+    </div>
+
+
+    <div id="container3">
+        <div id="box2" >
+            <div id="box12">
+                <h1 style="font-size: 10ch;">1</h1>
+                <h1>THE BIGGEST <br>SELECTION</h1>
+                <h5>Shop over 12,000 brands and <br>stores in one place.</h5>
+                <h5>
+                    Find exactly what you want with <br> powerful search and personal <br> recommendations.
+                </h5>
+            </div>
+            <div id="box12" >
+                <h1 style="font-size: 10ch;">2</h1>
+                <h1>THE HOTTEST <br>PRODUCTS</h1>
+                <h5>See what new and what trending.</h5>
+                <h5>Hit the heart to receive alerts on the <br> latest drops from your favourite  <br> brands.</h5>
+                
+            </div>
+            <div id="box12" >
+                <h1 style="font-size: 10ch;">3</h1>
+                <h1>THE BEST <br> PRICES</h1>
+                <h5>Compare prices and shipping <br> options across thousands of stores.</h5>
+                <h5>Lyst members are notified when an <br> item goes on sale.</h5>
+            </div>
+
+        </div>
+        <div id="box3" >
+            <h1 style="margin-top: 50% ; margin-left: 10%;">
+                SIGN UP<br>FOR<br>SMARTER<br>SHOPPING<br>
+             
+            </h1>
+            <button style="width: 100px; height: 40x ; margin-left: 10%;" onclick="window.location.href='sign.html'" >Join --></button>
+        </div>
+
+    </div>
+
+
+    <div id="container4">
+        <div  id="left1" >
+            <h1 style="margin-bottom: 10px;">MOST WANTED</h1>
+
+        </div>
+        <div id="cont1">
+            <a href="sneakrs.html" ><h3>NIKE RIFT<br> SNEKARS </h3></a>
+            <a href="demica.html" ><h3>DIEMME <br> ROCCIA BOOTS </h3></a>
+        </div>
+        <div>
+            <a href="sneakrs.html" ><h3>UGG FLUFF <br> SLIPPERS </h3></a>
+            <a href="plaid.html" ><h3>PLAID PANTS  </h3></a>
+        </div>
+        <div>
+            <a href="coats.html" ><h3>FLORAL BLAZERSOATS </h3></a>
+            <h3>CHRISTIAN <br>LOUBOUTIN <br>DANDELION SHOES</h3>
+        </div>
+        <div>
+            <a href="coats.html" ><h3>MENS FIELD <br> BLAZERS </h3></a>
+            <a href="jeans.html" ><h3>KSUBI<br> VAN WINKLE <br> JEANS </h3></a>
+        </div>
+        <div></div>
+
+    </div>
+    
+    <footer>
+        <!-- importing from components(footer) -->
+</footer>
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+    let pro = [
+        {
+            image : "https://cdna.lystit.com/cms/Image_from_i_OS_570_8c4ba5ce61.png",
+            name : "Crisp Monochrome",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/OSA_24_03_22_09a1fa2732.jpeg",
+            name : "One Step Ahead",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/REFINED_GLAMOUR_c966d97813.jpeg",
+            name : "REFINED GLAMOUR",
+
+        },
+        {
+            image : "https://cdna.lystit.com/cms/NEW_CLASSICS_f5f19784b9.jpeg",
+            name : "New Classics",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/JPG_SS_22_RTW_TOP_THE_ATTICO_PANTS_DOLCE_and_GABBANA_BAG_PRADA_WOMAN_1_8a2611b9e1.jpg",
+            name : "30 UNDER 300",
+        },
+        
+        {
+
+            image : "https://cdna.lystit.com/cms/PS_22_Affiliate_No_Logo_600x600_5857f310f9.jpg",
+            name : "GUUCI"
+        },
+        {
+            image : "https://cdna.lystit.com/cms/Screenshot_2022_03_08_at_14_40_26_4809776918.png",
+            name : "Mulberry x Nicholas Daley",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/600x600_HP_TOP_LYST_03befce6d4.png",
+            name :"PICES ON"
+        }
+    ]
+
+
+    pro.forEach((el)=>{
+        let {image,name} = el;
+        console.log(el)
+
+        let div = document.createElement("div");
+          div.id="div1"
+        let photo = document.createElement("img")
+        photo.id ="photo"
+        photo.src = image
+    
+
+        let dec = document.createElement("P")
+        dec.id="dec"
+        dec.textContent = name;
+
+        div.append(photo,dec)
+
+        document.getElementById("container1").append(div)
+
+
+    })
+
+    let pro1 = [
+        {
+            image : "https://cdna.lystit.com/cms/My_Post_81_76121ffa01.jpg",
+            name : "PATOU",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_gucci_eca9e74796.jpg",
+            name : "GUCCI",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_saint_laurent_2031eb80f7.jpeg",
+            name : "SAINT LAURENT",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_off_white_co_virgil_abloh_d8c6b37a9f.jpeg",
+            name : "OFF-WHITE",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_balenciaga_215cbc0fe0.jpeg",
+            name : "BALENCIAGA",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_nike_c3045162ba.png",
+            name : "NIKE",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_dolce_gabbana_bcb7049bb0.jpeg",
+            name : "DOLCE & GABBANA",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_rail_moncler_bcdcdc131d.jpeg",
+            name : "MONCLEAR",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/simone_rocha_earrings_d997cb6315.jpeg",
+            name : "SIMONE ROCHA",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/designer_category_fendi_jumpsuits_9f9ac55f4f.jpeg",
+            name : "FENDI JUMPSUIT",
+        },
+        {
+            image : "https://cdna.lystit.com/cms/mens_gucci_suits_af6c650ce2.jpeg",
+            name : "GUCCI SUIT",
+        },
+   
+    ]
+    pro1.forEach((el)=>{
+        let {image,name} = el;
+        console.log(el)
+
+        let div = document.createElement("div");
+          div.id="div1"
+        let photo = document.createElement("img")
+        photo.id ="photo1"
+        photo.src = image
+    
+
+        let dec = document.createElement("P")
+        dec.textContent = name;
+
+        div.append(dec,photo)
+
+        document.getElementById("container2").append(div)
+
+
+    })
+
+
+
+
+    </script>

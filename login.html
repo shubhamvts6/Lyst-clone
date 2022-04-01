@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #mio{
+            display: flex;
+        }
+        #main{
+            margin-top: 10%;
+            margin-left: 18%;
+            width: 25%;
+    max-width: none;
+
+        }
+        #btn{
+background-color: black;
+margin-top: 5%;
+width: 100%;
+height: 12%;
+color: white;
+font-size: larger;
+}
+        #pagetitle {
+    padding: 0;
+    margin: 20px 0;
+    color: #222;
+}
+#p{
+margin-top: 10%;
+width: 100%;
+display: flex;
+border: 1px solid black;
+background-color: white;
+}
+ #f{
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222;
+    margin: 10px 0px 4px;
+}
+#name{
+    /* border: 1px solid black; */
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+#m{
+    display: flex;
+    justify-content: space-evenly;
+    /* justify-content: baseline; */
+}
+#box2{
+    border: 1px solid black;
+    background-color: rgb(188,163,247);
+    width: 28%;
+    height: 300px;
+    
+    margin-right:20%;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+.vl {
+    margin-left: 50px;
+    margin-top: 7%;
+/* border-left: 2px solid rgb(162, 19, 19); */
+height: 400px;
+}
+#btn{
+background-color: black;
+width: 100%;
+height: 12%;
+color: white;
+font-size: larger;
+}
+#p{
+    /* border: 2px solid red; */
+    background-color: white;
+    color: black;
+width: 100%;
+height: 40px;
+display: flex;
+/* border: 2px solid black; */
+}
+#usr#f,#pass{
+width: 100%;
+
+/* border: 2px solid black; */
+margin-bottom: 2%;
+
+}
+#pass{
+width: 90%;
+
+/* border: 2px solid black; */
+margin-bottom: 2%;
+
+}
+a{
+color:rgba(22, 21, 21, 0.904);
+}
+#list{
+margin-top: 20px;
+
+}
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+
+     <div id="mio" >
+     <div id="main">
+ 
+        <div id="m" > 
+            <div id="n" > Already member </div>
+            <input style="background-color: black; color: white;" type="button" onclick="window.location.href='login.html'" value="NEW TO LYST" >
+            </div>
+        <div>
+        
+        <p style="color: rgba(34, 34, 34, 0.801); margin-top: 5%;" >Search thousands of fashion brands <br> and stores all in one place</p>
+        <h6>We just need a few details from you first.</h6>
+   
+       </div>
+           <form>
+               <h4 id="f">Name</h4> 
+               <div id="name">
+                   <input id="usr" type="text" placeholder="Enter username" />
+                   </div>
+
+                   <h4 id="f">Phone Number</h4>
+                   <div id="name">
+                       <input id="mbl" type="number" placeholder="Enter mobile number" />
+                       </div>
+                       <h4 id="f">Email Address</h4>
+                       <div id="name">
+                           <input id="email" type="text" placeholder="Enter email address" />
+                           </div>
+                           <h id="f">Create password</h>
+                           <div id="name">
+                               <input id="pass" type="password" placeholder="Enter password" />
+                               </div>
+                               <input id="btn" type="submit" value="JOIN LYST" />
+                           
+           </form>
+        </div>
+
+           <div class="vl"></div>
+
+           <div id="box2">
+             
+               <h4 style="    padding: 0;
+               margin: 50px 30px;
+               color: #222">As a Lyst member you can…</h4>
+               <ul style="margin-top: 20%;">
+                   <li id="list" >Save your searches</li>
+                   <li id="list" > Create a wishlist</li>
+                   <li id="list" > Get alerts on your items</li>
+                
+                   
+               </ul>
+                
+          
+       
+           </div>
+       
+       
+       
+       </div>
+
+    
+</div>
+
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+    document.querySelector("form").addEventListener("submit", formSubmit);
+  var userStack = JSON.parse(localStorage.getItem("userDataBase")) || [];
+  function formSubmit(event) {
+    event.preventDefault();
+    var email = document.querySelector("#email").value;
+    var pass = document.querySelector("#pass").value;
+    var usr = document.querySelector("#usr").value;
+    var mbl = document.querySelector("#mbl").value;
+
+    var userData = {
+      emailAdd: email,
+      passwd: pass,
+      userName: usr,
+      mblNum: mbl,
+    };
+
+    userStack.push(userData);
+
+    //console.log(userStack);
+    localStorage.setItem("userDataBase", JSON.stringify(userStack));
+    alert("signup success");
+    window.location.href = "sign.html";
+  }
+
+    </script>

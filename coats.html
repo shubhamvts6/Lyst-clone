@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  
+    <style>
+        #upper{
+            height: 10%;
+            border: 1px solid rebeccapurple;
+            background-color: rgb(243, 241, 234);
+        }
+        #main{
+            display: flex;
+            border: 2px sold red;
+        }
+        #right{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* gap: 1%; */
+            margin-left: 0px;
+            /* display: flex; */
+            /* border : 2px solid rgb(224, 28, 28); */
+            /* width: 100%; */
+        }
+        #div23{
+            border: 0.5px solid black;
+        }
+        #sidebox{
+            
+             border: 1px solid #fff;
+        width: 15%;
+    
+        /* position: absolute; */
+        background-color: white;
+        z-index: 999;
+        padding: 20px 25px;
+        overflow-y: scroll;
+        /* display: none; */
+        color: rgb(68, 68, 68);
+        font-family: "Bodoni Sans Regular",Helvetica,Arial,sans-serif;
+        font-weight: 550;
+        letter-spacing: 1px;
+        }
+        #sidebox>div{
+        margin-bottom: 15px;
+        cursor: pointer;
+        padding: 5px;
+        /* padding-left: 30px; */
+    }
+    #sidebox>div:hover{
+        text-decoration: underline;
+    } 
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<link rel="stylesheet" href="/style/footer.css">
+
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+     <div id="upper">
+         <h1 style="font-weight: 500; margin-top: 3%; font-size: 4ch; margin-left: 8%;" >FLORAL BLAZERS</h1>
+     </div>
+<div id="main">
+     <div id="sidebox">
+        <div ><h1>filter</h1></div>
+        
+        
+        <div >Category</div>
+        <div >Sale</div>
+        <div >Price</div>
+        <div>Shipping</div>
+        <div >Color</div>
+        <div >Material</div>
+        <div >Store</div>
+
+        
+      
+    </div>
+
+    <div id="right"></div>
+</div>
+
+     <footer>
+        <!-- importing from components(footer) -->
+</footer>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+   
+    
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+
+
+    let nike = [
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/465d6bb9/dolce-gabbana-Black-Floral-Lace-Pattern-Blazer.jpeg",
+            title : "Men's Blue Floral-print Blazer",
+            price : 231,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/theoutnet/1a796ccd/paco-rabanne-Black-Floral-print-Cotton-blend-Blazer.jpeg",
+            title : "Men's Ssense Exclusive Tan Florian Blazer",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/eraldo/605408a0/marni-Blue-Floral-print-Blazer.jpeg",
+            title : "Men's Black Jacquard Blazer With Embroidery",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/4d533a33/yohji-yamamoto-Black-Floral-print-Single-breasted-Blazer.jpeg",
+            title : "Men's Red Floral Print Front Slit Blazer",
+            price :233 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/0f26f380/comme-des-garcons--Floral-Single-breasted-Blazer.jpeg",
+            title : "Men's Ssense Exclusive Tan Florian Blazer",
+            price : 344,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/55af721b/comme-des-garcons--Floral-Asymmetric-hem-Blazer.jpeg",
+            title : "Men's Red Floral Print Front Slit Blazer",
+            price : 987,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/08024609/comme-des-garcons-red-Sakko-mit-Blumen-Print.jpeg",
+            title : "Men's Black Jacquard Blazer With Embroidery",
+            price : 567,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f891c24f/valentino-black-Mens-Garden-Double-breasted-Blazer.jpeg",
+            title : "Men's Blue Floral-print Blazer",
+            price : 345,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/ssense/7558bd2c/maryam-nassir-zadeh-KENMARE-Ssense-Exclusive-Tan-Florian-Blazer.jpeg",
+            title : "Men's Ssense Exclusive Tan Florian Blazer",
+            price :746 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/coltortiboutique/959452a5/comme-des-garcons-GreyLight-blueRed-Skull-Floral-Jacket.jpeg",
+            title : "Men's Red Floral Print Front Slit Blazer",
+            price : 976,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/mrporter/a07a6582/saint-laurent-Black-Slim-fit-Wool-And-Silk-blend-Jacquard-Blazer.jpeg",
+            title : "Men's Blue Floral-print Blazer",
+            price : 455 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/40f8e3dc/comme-des-garcons--Single-Breasted-Blazer.jpeg",
+            title : "Men's Blue Floral-print Blazer",
+            price :997 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/ssense/70080558/comme-des-garcons-NATURAL-Off-Cotton-Blazer.jpeg",
+            title : "Men's Red Floral Print Front Slit Blazer",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/dolcegabbana/9cdea272/dolce-gabbana-Multicolor-Chaqueta-Beat-de-jacquard-floral-lurex.jpeg",
+            title : "Men's Ssense Exclusive Tan Florian Blazer",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/0f26f380/comme-des-garcons--Floral-Single-breasted-Blazer.jpeg",
+            title : "Men's Blue Floral-print Blazer",
+            price :233 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/0f26f380/comme-des-garcons--Floral-Single-breasted-Blazer.jpeg",
+            title : "Men's Ssense Exclusive Tan Florian Blazer",
+            price : 344,
+        },
+       
+      
+     
+       
+       
+
+    ]
+
+
+nike.forEach((el )=>{
+   let {image,title,price} = el
+
+    let div = document.createElement("div");
+    div.id="div23"
+
+    let photo = document.createElement("img")
+    photo.src=el.image
+
+
+    let titl = document.createElement("p")
+    titl.textContent = el.title
+
+
+    let pric = document.createElement("p")
+    pric.textContent = `$${el.price}`;
+
+
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click",function(){
+         addTocart(el);
+    })
+
+    div.append(photo,titl,pric,btn)
+
+
+document.querySelector("#right").append(div)
+
+})
+var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+    //var cartArr = [];
+
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+    
+    </script>

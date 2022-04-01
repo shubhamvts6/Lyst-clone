@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-left: 250px;
+            column-gap: 50px;
+        }
+         #total{
+        display: inline;
+        margin-left: 10%;
+        border: 2px solid gray;
+        /* padding-top: 200px; */
+        padding: 10px;
+        /* height: 10%; */
+        color: blue;
+        font-size: 2em;
+    }
+   
+    #cart_btn{
+        width: 200px;
+        height: 50px;
+        background-color: teal;
+        color: white;
+        margin-left: 20%;
+    } 
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<link rel="stylesheet" href="/style/footer.css">
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+     <div id="container" >
+    </div>
+  
+     <button id="cart_btn" onclick="location.href='checkout.html'">GO TO PAYMENT</button>
+       <div id="total" ></div>
+   
+       <footer>
+        <!-- importing from components(footer) -->
+</footer>
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+
+    
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+
+    var cartArr= JSON.parse(localStorage.getItem("addTocartPage"));
+
+    cartArr.forEach((el )=>{
+   let {image,title,price} = el
+
+    let div = document.createElement("div");
+    div.id="div23"
+
+    let photo = document.createElement("img")
+    photo.src=el.image
+
+
+    let titl = document.createElement("p")
+    titl.textContent = el.title
+
+
+    let pric = document.createElement("p")
+    pric.textContent = `$${el.price}`;
+
+
+  
+    div.append(photo,titl,pric)
+
+
+document.querySelector("#container").append(div)
+
+    })
+    var total =cartArr.reduce(function (acc,cv){
+        return acc+Number(cv.price)
+    },0)
+    console.log(total)
+    document.querySelector("#total").innerHTML=`your total amount is $ ${total}`
+
+    localStorage.setItem("total_value",JSON.stringify(total));
+
+
+    </script>

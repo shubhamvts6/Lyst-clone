@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  
+    <style>
+        #upper{
+            height: 10%;
+            border: 1px solid rebeccapurple;
+            background-color: rgb(243, 241, 234);
+        }
+        #main{
+            display: flex;
+            border: 2px sold red;
+        }
+        #right{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* gap: 1%; */
+            margin-left: 0px;
+            /* display: flex; */
+            /* border : 2px solid rgb(224, 28, 28); */
+            /* width: 100%; */
+        }
+        #div23{
+            border: 1px solid black;
+        }
+        #sidebox{
+            
+             border: 1px solid #fff;
+        width: 15%;
+    
+        /* position: absolute; */
+        background-color: white;
+        z-index: 999;
+        padding: 20px 25px;
+        overflow-y: scroll;
+        /* display: none; */
+        color: rgb(68, 68, 68);
+        font-family: "Bodoni Sans Regular",Helvetica,Arial,sans-serif;
+        font-weight: 550;
+        letter-spacing: 1px;
+        }
+        #sidebox>div{
+        margin-bottom: 15px;
+        cursor: pointer;
+        padding: 5px;
+        /* padding-left: 30px; */
+    }
+    #sidebox>div:hover{
+        text-decoration: underline;
+    } 
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<link rel="stylesheet" href="/style/footer.css">
+
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+     <div id="upper">
+         <h1 style="font-weight: 500; margin-top: 3%; font-size: 4ch; margin-left: 8%;" >DIEMME
+            ROCCIA </h1>
+     </div>
+<div id="main">
+     <div id="sidebox">
+        <div ><h1>filter</h1></div>
+        
+        
+        <div >Category</div>
+        <div >Sale</div>
+        <div >Price</div>
+        <div>Shipping</div>
+        <div >Color</div>
+        <div >Material</div>
+        <div >Store</div>
+
+        
+      
+    </div>
+
+    <div id="right"></div>
+</div>
+
+     <footer>
+        <!-- importing from components(footer) -->
+</footer>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+   
+    
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+
+
+    let nike = [
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/d07895a0/adrianna-papell-Midnight-Sequin-One-shoulder-Column-Gown.jpeg",
+            title : "Women's Blue Sequin One-shoulder Column Gown",
+            price : 231,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/f192dc13/david-koma-silver-Sequined-One-shoulder-Gown.jpeg",
+            title : "Women's Metallic Sequined One-shoulder Gown",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/modaoperandi/e6b87c8d/elie-saab-white-Sequined-Tulle-One-shoulder-Gown.jpeg",
+            title : "Women's Black One-shoulder Sequin-embellished Wool And Silk-blend Crepe Gown",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/theoutnet/9d81bc66/valentino-Black-One-shoulder-Sequin-embellished-Wool-And-Silk-blend-Crepe-Gown.jpeg",
+            title : "Women's Metallic One Shoulder Sequin Gown",
+            price :233 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/modaoperandi/85c00bed/david-koma-metallic-Sequined-One-shoulder-Gown.jpeg",
+            title : "Women's Blue One-shoulder Gown",
+            price : 344,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/bloomingdales/e36cc4f7/mac-duggal-Gold-One-Shoulder-Sequin-Gown.jpeg",
+            title : "Women's Blue One-shoulder Gown",
+            price : 987,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/d07895a0/adrianna-papell-Midnight-Sequin-One-shoulder-Column-Gown.jpeg",
+            title : "Women's Metallic Sequined One-shoulder Gown",
+            price : 567,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/bloomingdales/a1fe1df4/mac-duggal-Burgundy-One-Shoulder-Sequin-Gown.jpeg",
+            title : "Women's Black One-shoulder Sequin-embellished Wool And Silk-blend Crepe Gown",
+            price : 345,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/ruelala/0277e0da/rene-ruiz-Black-One-shoulder-Gown.jpeg",
+            title : "Women's Black One-shoulder Sequin-embellished Wool And Silk-blend Crepe Gown",
+            price :746 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/gilt/90792d94/marchesa-notte-Blue-One-shoulder-Gown.jpeg",
+            title : "Women's Metallic One Shoulder Sequin Gown",
+            price : 976,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/modaoperandi/85c00bed/david-koma-metallic-Sequined-One-shoulder-Gown.jpeg",
+            title : "Women's Blue One-shoulder Gown",
+            price : 455 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/atterley/9ecd3d7b/pamella-roland-Silver-Iris-Sequin-One-Shoulder-Gown.jpeg",
+            title : "Women's Metallic Sequined One-shoulder Gown",
+            price :997 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/a7416d8c/saiid-kobeisy-Red-One-shoulder-Embellished-Gown.jpeg",
+            title : "Women's Metallic Sequined One-shoulder Gown",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/ruelala/0277e0da/rene-ruiz-Black-One-shoulder-Gown.jpeg",
+            title : "Women's Metallic One Shoulder Sequin Gown",
+            price :746 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/d07895a0/adrianna-papell-Midnight-Sequin-One-shoulder-Column-Gown.jpeg",
+            title : "Women's Black One-shoulder Sequin-embellished Wool And Silk-blend Crepe Gown",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/bloomingdales/ea44ad97/mac-duggal-Rosegold-One-Shoulder-Sequin-Gown.jpeg",
+            title : "Women's Metallic Sequined One-shoulder Gown",
+            price :233 ,
+        },
+       
+      
+     
+       
+       
+
+    ]
+
+
+nike.forEach((el )=>{
+   let {image,title,price} = el
+
+    let div = document.createElement("div");
+    div.id="div23"
+
+    let photo = document.createElement("img")
+    photo.src=el.image
+
+
+    let titl = document.createElement("p")
+    titl.textContent = el.title
+
+
+    let pric = document.createElement("p")
+    pric.textContent = `$${el.price}`;
+
+
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click",function(){
+         addTocart(el);
+    })
+
+    div.append(photo,titl,pric,btn)
+
+
+document.querySelector("#right").append(div)
+
+})
+var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+    //var cartArr = [];
+
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+    
+    </script>

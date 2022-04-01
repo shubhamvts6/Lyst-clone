@@ -4,3 +4,10 @@ This a construct week project for unit 3 Masai school. i am are working on clone
 
 # Medium BLog link
 https://medium.com/@shubhamvts6/lyst-com-clone-2012d3bfbac9
+
+
+# Gdrive video link
+https://drive.google.com/file/d/1_DVBo0pEuWsvicKuMrseLXwIwEe0IDf1/view?usp=sharing
+
+
+# Netlify link

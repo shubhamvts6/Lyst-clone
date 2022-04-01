@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/536c9c2fbc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  
+    <style>
+        #upper{
+            height: 10%;
+            border: 1px solid rebeccapurple;
+            background-color: rgb(243, 241, 234);
+        }
+        #main{
+            display: flex;
+            border: 2px sold red;
+        }
+        #right{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* gap: 1%; */
+            margin-left: 0px;
+            /* display: flex; */
+            /* border : 2px solid rgb(224, 28, 28); */
+            /* width: 100%; */
+        }
+        #sidebox{
+            
+             border: 1px solid #fff;
+        width: 15%;
+    
+        /* position: absolute; */
+        background-color: white;
+        z-index: 999;
+        padding: 20px 25px;
+        overflow-y: scroll;
+        /* display: none; */
+        color: rgb(68, 68, 68);
+        font-family: "Bodoni Sans Regular",Helvetica,Arial,sans-serif;
+        font-weight: 550;
+        letter-spacing: 1px;
+        }
+        #sidebox>div{
+        margin-bottom: 15px;
+        cursor: pointer;
+        padding: 5px;
+        /* padding-left: 30px; */
+    }
+    #sidebox>div:hover{
+        text-decoration: underline;
+    } 
+    </style>
+</head>
+<link rel="stylesheet" href="/style/navbar.css">
+<link rel="stylesheet" href="/style/footer.css">
+
+<body>
+    <header>
+        <!-- importing from components(navbar) -->
+     </header>
+     <div id="upper">
+         <h1 style="font-weight: 500; margin-top: 3%; font-size: 4ch; margin-left: 8%;" >PLAID PANTS</h1>
+     </div>
+<div id="main">
+     <div id="sidebox">
+        <div ><h1>filter</h1></div>
+        
+        
+        <div >Category</div>
+        <div >Sale</div>
+        <div >Price</div>
+        <div>Shipping</div>
+        <div >Color</div>
+        <div >Material</div>
+        <div >Store</div>
+
+        
+      
+    </div>
+
+    <div id="right"></div>
+</div>
+
+     <footer>
+        <!-- importing from components(footer) -->
+</footer>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar from './components/navbar.js'
+    document.querySelector("header").innerHTML=navbar();
+   
+    
+    import footer from './components/footer.js'
+    document.querySelector("footer").innerHTML=footer();
+
+
+
+
+    let nike = [
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/net-a-porter/d61d8e1f/dolce-gabbana-black-Leggings-Aus-Jersey-Aus-Stretch-baumwolle.jpeg",
+            title : "Men's Brown Leather paint",
+            price : 231,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/hervia/0fc895c0/comme-des-garcons-Navy-Cropped-Sarouel-Pants-Navy.jpeg",
+            title : "Women's White Air Force 1 Pixel Se paint",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/gilt/9ef65bf0/adrianna-papell-White-Pearl-Crepe-Pant.jpeg",
+            title : "Men's White Blazer Low '77 Vntg",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/43f2660e/valentino-Multi-Macro-Ortensia-Printed-Flared-Pants.jpeg",
+            title : "Men's Red Air Max Pre-day",
+            price :233 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/425bd4e5/marni-Green-High-waist-Relaxed-Cropped-Pants.jpeg",
+            title : "Men's White Court Vision Lace-up paint",
+            price : 344,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/da780a5f/saint-laurent-Black-Skinny-Fit-Leather-Pants.jpeg",
+            title : "Men's Blue React Live Lace-up s",
+            price : 987,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/4b8655c8/dolce-gabbana-Black-High-Waist-Skinny-Trousers.jpeg",
+            title : "Women's White Blazer Low '77 Jumbo Lace-up paint",
+            price : 567,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/lvr/7783169a/maryam-nassir-zadeh--.jpeg",
+            title : "Women's Purple Air Force 1 '07 Skeleton",
+            price : 345,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/a7fa0e79/calvin-klein-Black-White-Logo-Pull-on-Leggings.jpeg",
+            title : "Men's White Blazer Mid '77 Jumbo paint",
+            price :746 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/511d7b12/calvin-klein-Dove-Heather-Logo-Cropped-Joggers.jpeg",
+            title : "Men's White Air Mx 720 20 paint",
+            price : 976,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/d1a290a2/saint-laurent-Brown-Leather-Slim-Fit-Pantaboots.jpeg",
+            title : "Women's White Zoom Air Fire paint",
+            price : 455 ,
+        },
+       
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/farfetch/6ad585c3/marchesa-notte-Black-High-waisted-Track-Pants.jpeg",
+            title : "Men's Black Air Vapormax 2021 Flyknit",
+            price :997 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/mytheresa/c18550d7/valentino-multicoloured-Logo-printed-Silk-Twill-Pants.jpeg",
+            title : "Women's White Air Force 1 Pixel Se paint",
+            price : 121,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/24sevres/8e962e54/mugler-black_black-Spiral-Illusion-Leggings.jpeg",
+            title : "Men's White Blazer Low '77 Vntg paint",
+            price : 343,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/cettire/01e2171b/saint-laurent-Black-Cropped-Flared-Pants.jpeg",
+            title : "Men's Red Air Max Pre-day",
+            price :233 ,
+        },
+        {
+            image : "https://cdna.lystit.com/200/250/tr/photos/saksoff5th/a7fa0e79/calvin-klein-Black-White-Logo-Pull-on-Leggings.jpeg",
+            title : "Men's White Blazer Mid '77 Jumbo paint",
+            price :746 ,
+        },
+       
+      
+     
+       
+       
+
+    ]
+
+
+nike.forEach((el )=>{
+   let {image,title,price} = el
+
+    let div = document.createElement("div");
+    div.id="div23"
+
+    let photo = document.createElement("img")
+    photo.src=el.image
+
+
+    let titl = document.createElement("p")
+    titl.textContent = el.title
+
+
+    let pric = document.createElement("p")
+    pric.textContent = `$${el.price}`;
+
+
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click",function(){
+         addTocart(el);
+    })
+
+    div.append(photo,titl,pric,btn)
+
+
+document.querySelector("#right").append(div)
+
+})
+var cartArr= JSON.parse(localStorage.getItem("addTocartPage"))||[];
+    //var cartArr = [];
+
+    function addTocart(el){
+        console.log(el)
+        cartArr.push(el);
+        localStorage.setItem("addTocartPage",JSON.stringify(cartArr));
+        alert("Added to Cart");
+ }
+    
+    </script>
